@@ -1,0 +1,25 @@
+{
+  "name": "etils",
+  "version": "1.0.0",
+  "description": "easy utils 工具函数库",
+  "main": "dist/index.js",
+  "jsnext": "dist/index.esm.js",
+  "module": "dist/index.aio.js",
+  "scripts": {
+    "build:self": "rollup -c config/rollup.config.js",
+    "build:esm": "rollup -c config/rollup.config.esm.js",
+    "build:aio": "rollup -c config/rollup.config.aio.js",
+    "build": "npm run build:self && npm run build:esm && npm run build:aio",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "name": "dengnanhao",
+    "email": "19856535725@163.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-node-resolve": "^3.0.3"
+  }
+}
