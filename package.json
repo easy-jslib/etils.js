@@ -17,6 +17,7 @@
     "name": "dengnanhao",
     "email": "19856535725@163.com"
   },
+  "sideEffects": false,
   "license": "MIT",
   "devDependencies": {
     "rollup": "^0.57.1",
