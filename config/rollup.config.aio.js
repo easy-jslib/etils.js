@@ -12,6 +12,6 @@ module.exports = {
         nodeResolve({
             main: true
         }),
-        common.getCompiler()
+        ...common.plugins()
     ]
 }

@@ -35,5 +35,4 @@ function clone(source) {
   return target;
 }
 
-exports.type = type;
 exports.clone = clone;

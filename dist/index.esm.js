@@ -31,4 +31,4 @@ function clone(source) {
   return target;
 }
 
-export { type, clone };
+export { clone };

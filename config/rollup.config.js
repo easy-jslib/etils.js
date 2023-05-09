@@ -6,5 +6,5 @@ module.exports = {
         format: "cjs",
         banner: common.banner
     },
-    plugins: [common.getCompiler()]
+    plugins: [...common.plugins()]
 }

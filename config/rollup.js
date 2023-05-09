@@ -1,5 +1,6 @@
 const pkg = require("../package.json")
 const babel = require("rollup-plugin-babel");
+const commonjs = require("rollup-plugin-commonjs")
 const version = pkg.version
 
 const banner = `/*!
@@ -9,7 +10,8 @@ const banner = `/*!
 `
 exports.banner = banner
 
-function getCompiler(opt) {
+// 将ES6的语法编译为ES5的语法
+function compilerGrammar(opt) {
     return babel({
         babelrc: false,
         presets: [
@@ -28,4 +30,28 @@ function getCompiler(opt) {
         exclude: "node_modules/**"
     })
 }
-exports.getCompiler = getCompiler
+
+exports.compilerGrammar = compilerGrammar
+
+// 将ES6的api编译成ES5的api
+function compilerApi() {
+    return [
+        '@babel/plugin-transform-runtime',
+        {
+            corejs: 3
+        }
+    ]
+}
+
+exports.compilerApi = compilerApi
+
+// 导出公共插件
+exports.plugins = function () {
+    return [
+        commonjs({
+            exclude: "node_modules/**"
+        }),
+        compilerGrammar(),
+        compilerApi()
+    ]
+}

@@ -37,7 +37,6 @@
       return target;
     }
 
-    exports.type = type;
     exports.clone = clone;
 
     Object.defineProperty(exports, '__esModule', { value: true });
