@@ -5,5 +5,6 @@ module.exports = {
         file: "dist/index.esm.js",
         format: "es",
         banner: common.banner
-    }
+    },
+    plugins: [common.getCompiler()]
 }

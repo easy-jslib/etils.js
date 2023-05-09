@@ -11,6 +11,7 @@ module.exports = {
     plugins: [
         nodeResolve({
             main: true
-        })
+        }),
+        common.getCompiler()
     ]
 }

@@ -4,6 +4,7 @@ module.exports = {
     output: {
         file: "dist/index.js",
         format: "cjs",
-        banner: common.common
-    }
+        banner: common.banner
+    },
+    plugins: [common.getCompiler()]
 }
