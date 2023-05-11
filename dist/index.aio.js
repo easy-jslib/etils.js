@@ -36,8 +36,19 @@
       }
       return target;
     }
+    // 根据key获取浏览器地址参数
+    function getUrlParam(key) {
+      var query = location.search[0] === '?' ? location.search.slice(1) : location.search;
+      var map = query.split("&").reduce(function (data, key) {
+        var arr = key.split("=");
+        data[arr[0]] = arr[1];
+        return data;
+      }, {});
+      return map[key];
+    }
 
     exports.clone = clone;
+    exports.getUrlParam = getUrlParam;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

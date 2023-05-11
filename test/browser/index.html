@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../node_modules/mocha/mocha.css"/>
+    <title>单元测试-浏览器测试</title>
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="../../node_modules/mocha/mocha.js"></script>
+    <script src="../../node_modules/expect.js/index.js"></script>
+    <script src="../../dist/index.aio.js"></script>
+    <!--模块加载工具，否则报：require is not defined-->
+    <script>
+        const libs = {
+            'expect.js': expect,
+            '../src/index': window['etils']
+        }
+        const require = function (path) {
+            return libs[path]
+        }
+    </script>
+
+
+    <script>
+        mocha.setup("bdd")
+    </script>
+    <script src="../test.js"></script>
+    <script>
+        mocha.run()
+    </script>
+</body>
+</html>

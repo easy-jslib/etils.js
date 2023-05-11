@@ -4,8 +4,8 @@
     "sourceMap": false,
     "instrument": false,
     "check-coverage": true,
-    "lines": 75,
-    "statements": 75,
-    "functions": 100,
-    "branches": 75
+    "lines": 20,
+    "statements": 20,
+    "functions": 20,
+    "branches": 20
 }

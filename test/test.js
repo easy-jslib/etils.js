@@ -1,6 +1,8 @@
 const expect = require("expect.js")
+const JSDOM = require("mocha-jsdom")
 // const clone = require('../dist/index').clone
 const clone = require('../src/index').clone
+const getUrlParam = require('../src/index').getUrlParam
 
 describe("function clone", function () {
     describe("param data", function () {
@@ -28,4 +30,13 @@ describe("function clone", function () {
             expect(clone(null)).to.equal(null)
         })
     })
+
+    describe("获取当前地址栏中的参数", function () {
+        // jsdom模拟浏览器环境
+        JSDOM({url: 'https://www.hddata.cn?token=123456'})
+        it('token的值', function () {
+            expect(getUrlParam('token')).to.be.equal("123456")
+        });
+    })
 })
+

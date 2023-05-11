@@ -23,6 +23,14 @@ export function clone(source) {
     }
     return target
 }
-
-
+// 根据key获取浏览器地址参数
+export function getUrlParam(key) {
+    const query = location.search[0] === '?' ? location.search.slice(1) : location.search
+    const map = query.split("&").reduce((data, key) => {
+        const arr = key.split("=")
+        data[arr[0]] = arr[1]
+        return data
+    }, {})
+    return map[key]
+}
 
