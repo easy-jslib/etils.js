@@ -1,4 +1,4 @@
-import {type} from "./type";
+import {type} from './type.js'
 
 // 引用类型深拷贝
 export function clone(source) {
@@ -23,4 +23,6 @@ export function clone(source) {
     }
     return target
 }
+
+
 

@@ -10,7 +10,7 @@
     "build:esm": "rollup -c config/rollup.config.esm.js",
     "build:aio": "rollup -c config/rollup.config.aio.js",
     "build": "npm run build:self && npm run build:esm && npm run build:aio",
-    "test": "mocha"
+    "test": "cross-env NODE_ENV=test nyc mocha"
   },
   "keywords": [],
   "author": {
@@ -23,8 +23,12 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.21.0",
+    "babel-plugin-istanbul": "^6.1.1",
+    "cross-env": "^7.0.3",
     "expect.js": "^0.3.1",
     "mocha": "^10.2.0",
+    "nyc": "^13.3.0",
     "rollup": "^0.60.0",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^8.3.0",
