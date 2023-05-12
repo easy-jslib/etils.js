@@ -1,7 +1,7 @@
 {
-  "name": "etils",
+  "name": "etils.js",
   "version": "1.0.0",
-  "description": "easy utils 工具函数库",
+  "description": "etils.js 简易的工具函数库",
   "main": "dist/index.js",
   "jsnext": "dist/index.esm.js",
   "module": "dist/index.aio.js",

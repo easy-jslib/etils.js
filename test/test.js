@@ -30,13 +30,14 @@ describe("function clone", function () {
             expect(clone(null)).to.equal(null)
         })
     })
+})
 
-    describe("获取当前地址栏中的参数", function () {
-        // jsdom模拟浏览器环境
-        JSDOM({url: 'https://www.hddata.cn?token=123456'})
+describe("function getUrlParam", function () {
+    // jsdom是模拟浏览器环境 puppeteer代表的是真实的浏览器环境，所以puppeteer自动化测试时需要注释浏览器模拟环境
+    // JSDOM({url: 'https://www.hddata.cn?token=123456'})
+    describe("param token", function () {
         it('token的值', function () {
             expect(getUrlParam('token')).to.be.equal("123456")
         });
     })
 })
-
