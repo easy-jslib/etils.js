@@ -34,5 +34,3 @@ export function getUrlParam(key) {
   }, {});
   return map[key];
 }
-
-const a = '1';

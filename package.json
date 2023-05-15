@@ -1,6 +1,6 @@
 {
   "name": "etils.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "etils.js 简易的工具函数库",
   "main": "dist/index.js",
   "jsnext": "dist/index.esm.js",
@@ -16,7 +16,10 @@
     "publish": "npm publish --access publish",
     "publish:beta": "npm publish --tag=beta",
     "prepare": "husky install",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "ci": "commit",
+    "cz": "git-cz",
+    "changelog": "npx standard-version"
   },
   "keywords": [
     "javascript",
@@ -38,7 +41,12 @@
     "@babel/plugin-transform-runtime": "^7.21.4",
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "^7.21.0",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@commitlint/cz-commitlint": "^17.5.0",
+    "@commitlint/prompt-cli": "^17.6.3",
     "babel-plugin-istanbul": "^6.1.1",
+    "commitizen": "^4.3.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.40.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -54,7 +62,8 @@
     "rollup": "^0.60.0",
     "rollup-plugin-babel": "^4.0.3",
     "rollup-plugin-commonjs": "^8.3.0",
-    "rollup-plugin-node-resolve": "^3.0.3"
+    "rollup-plugin-node-resolve": "^3.0.3",
+    "standard-version": "^9.5.0"
   },
   "dependencies": {
     "@babel/runtime-corejs2": "^7.21.5",
@@ -64,5 +73,10 @@
   "publishConfig": {
     "registry": "https://registry.npm.js.org",
     "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   }
 }
