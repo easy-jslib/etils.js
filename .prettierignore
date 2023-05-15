@@ -1,0 +1,6 @@
+#.prettierignore
+dist
+coverage
+.nyc_output
+pnpm-lock.yaml
+node_modules

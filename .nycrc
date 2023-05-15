@@ -1,11 +1,11 @@
 {
-    "require": ["@babel/register"],
-    "reporter": ["html", "text"],
-    "sourceMap": false,
-    "instrument": false,
-    "check-coverage": true,
-    "lines": 20,
-    "statements": 20,
-    "functions": 20,
-    "branches": 20
+  "require": ["@babel/register"],
+  "reporter": ["html", "text"],
+  "sourceMap": false,
+  "instrument": false,
+  "check-coverage": true,
+  "lines": 20,
+  "statements": 20,
+  "functions": 20,
+  "branches": 20
 }

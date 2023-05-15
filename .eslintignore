@@ -1,0 +1,17 @@
+#.eslintignore
+dist
+package.json
+package-lock.json
+.eslintignore
+.eslintrc.json
+.babelrc
+.editorconfig
+.eslintcache
+.github
+.gitignore
+.husky
+.lintstagedrc.js
+.nycrc
+.nyc_output
+test
+doc
