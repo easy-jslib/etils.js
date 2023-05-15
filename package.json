@@ -1,6 +1,6 @@
 {
   "name": "etils.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "etils.js 简易的工具函数库",
   "main": "dist/index.js",
   "jsnext": "dist/index.esm.js",
@@ -11,9 +11,13 @@
     "build:aio": "rollup -c config/rollup.config.aio.js",
     "build": "npm run build:self && npm run build:esm && npm run build:aio",
     "test": "cross-env NODE_ENV=test nyc mocha",
-    "test:puppeteer": "node .\\test\\browser\\puppeteer.js"
+    "test:puppeteer": "node .\\test\\browser\\puppeteer.js",
+    "pack": "npm pack --dry-run",
+    "publish": "npm publish --access publish",
+    "publish:beta": "npm publish --tag=beta"
   },
-  "keywords": [],
+  "keywords": ["javascript", "utils", "tool"],
+  "files": ["/dist", "LICENSE"],
   "author": {
     "name": "dengnanhao",
     "email": "19856535725@163.com"
@@ -41,5 +45,9 @@
     "@babel/runtime-corejs2": "^7.21.5",
     "@babel/runtime-corejs3": "^7.21.5",
     "core-js": "^3.30.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.js.org",
+    "access": "public"
   }
 }
